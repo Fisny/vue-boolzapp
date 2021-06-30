@@ -1,0 +1,98 @@
+/* generals */
+.container-fluid{
+    background-color: rosybrown;
+    
+}
+
+.contacts-side{
+    height: 100vh;
+    background-color: #fff;
+}
+
+.messages-side{
+    height: 100vh;
+    background-color: sandybrown;
+}
+
+/*  */
+/* left side */
+/* contacts */
+/*  */
+
+.nome-utente-side{
+    background-color: #eaeaea;
+    height: 70px;
+    width: 100%;
+}
+
+.nome-utente-side img{
+    max-width: 100%;
+    width: 50px;
+    border-radius: 50px;
+}
+
+.ricevi-notifiche{
+    background-color: #9fd8f8;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.notifica-cerchio{
+    border-radius: 50px;
+    background-color: #fff;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-bell-slash{
+    color: #9fd8f8;
+    font-size: 30px;
+}
+
+.cerca-chat{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+i{
+    color: #9a9a9a;
+}
+
+.cerca-chat input{
+    border: none;
+    margin-left: 20px;
+    width: 250px;
+    max-width: 100%;
+}
+
+.contatti img{
+    max-width: 100%;
+    width: 60px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+}
+
+/*  */
+/* right side */
+/* messages */
+/*  */
+
+.utente-banner{
+    background-color: #eaeaea;
+    height: 70px;
+    width: 100%;
+    border-left: 1px solid #b1b1b1;
+}
+
+.utente-banner img{
+    max-width: 100%;
+    width: 60px;
+    border-radius: 50px;
+    margin-left: 5px;
+}
+
+
