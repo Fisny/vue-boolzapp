@@ -12,7 +12,7 @@
 </head>
 <body>
     
-    <div class="container-fluid">
+    <div class="container-fluid app">
         
        
         <div class="row row-container">
@@ -49,39 +49,26 @@
                 </div>
                 <!-- contatti -->
                 <div class="contatti">
-                    <div  class="d-flex align-items-center">
-                        <img src="img/avatar_1.jpg" alt="avatar-1">
-                        <h5>Michele</h5>
+
+                    <div  class="d-flex align-items-center" @click="cambiaImg(index)" v-for="(element, index) in contacts">
+                        <img src="img/avatar_1.jpg" alt="avatar">
+                        <h5>{{element.name}}</h5>
                     </div>
-                    <hr>
-                    <div class="d-flex align-items-center"> 
-                        <img src="img/avatar_2.jpg" alt="avatar-2">
-                        <h5>Fabio</h5>
-                    </div>
-                    <hr>
-                    <div class="d-flex align-items-center">
-                        <img src="img/avatar_3.jpg" alt="avatar-3">
-                        <h5>Samuele</h5>
-                    </div>
-                    <hr>
-                    <div class="d-flex align-items-center">
-                        <img src="img/avatar_4.jpg" alt="avatar-4">
-                        <h5>Luisa</h5>
-                    </div>
+                    
+                    
                 </div>
             </div>
             
             <!-- right side (messages) -->
             <div class="col-8 messages-side p-0 ">
-    
-                <div class="utente-banner">
 
                     <!-- top banner -->
-                    <div class="d-flex justify-content-between">
+                    <div class="utente-banner d-flex justify-content-between">
                         <div class="d-flex align-items-center">
+                            
                             <img src="img/avatar_1.jpg" alt="avatar-1">
-                            <h5>Michele</h5>
-                            <p>Ultimo accesso:</p>
+                            <h5>{{}}</h5>
+                            
                         </div>
 
                         <div class="d-flex align-items-center">
@@ -90,9 +77,23 @@
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
                     </div>
-                    
-                </div>
-                
+
+                    <!-- mid chat -->
+                    <div class="chat-utenti">
+                        <div class="messaggio" v-for="message in contacts[indexContact].messages" :class="getMessageClass(message.status)">
+                            {{message.date}}
+                            {{message.text}}
+                        </div>
+                        
+                        
+                       
+                    </div>
+                    <!-- foot chat -->
+                    <div class="input-chat d-flex align-items-center">
+                        <i class="far fa-smile"></i>
+                        <input type="text" @keyup.enter="sendMessage" v-model="userMessage" placeholder="scrivi un messaggio">
+                        <i class="fas fa-microphone"></i>
+                    </div>
                 
             </div>
         </div>

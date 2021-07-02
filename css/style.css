@@ -60,6 +60,10 @@
 
 i{
     color: #9a9a9a;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .cerca-chat input{
@@ -74,6 +78,7 @@ i{
     width: 60px;
     border-radius: 50px;
     margin-bottom: 25px;
+    cursor: pointer;
 }
 
 /*  */
@@ -96,3 +101,55 @@ i{
 }
 
 
+.input-chat{
+    background-color: #f2eeea;
+    height: 100px;
+    width: 100%;
+    border-left: 1px solid #b1b1b1;
+}
+
+.chat-utenti{
+    height: calc(100% - 70px - 100px);
+    background-image: url("/img/mine.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    
+    
+}
+
+.fa-smile, .fa-microphone{
+    color: #6c7376;
+    font-size: 30px;
+}
+
+.input-chat input{
+    border: none;
+    margin: 0 25px;
+    width: 800px;
+    height: 50px;
+}
+
+.bianco{
+    margin-left: 25px;
+    background-color: white;
+    float: left;
+}
+
+.verde{
+    margin-right: 25px;
+    background-color: #dcf8c0;
+    float: right;
+}
+
+.messaggio{
+    clear: both;
+    border-radius: 10px;
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
