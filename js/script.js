@@ -3,6 +3,9 @@ Vue.config.devtools = true;
 new Vue ({
     el: '.app',
     data: {
+        userMessage: '',
+        indexContact: 0,
+        indexImg: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -88,7 +91,7 @@ new Vue ({
                 ],
             },
         ],
-        indexContact: 0,
+        
         
     },
     methods: {
@@ -99,8 +102,22 @@ new Vue ({
                 return 'bianco'
             }
         },
+
         cambiaImg(index) {
             this.indexContact = index;
-        } 
+        },
+
+        
+
+        // sendMessage: function() {
+        //     this.contacts[this.indexContact].message.push({
+        //         date: '',
+        //         text: this.userMessage,
+        //         status: 'sent',
+        //     })
+            
+        // },
+
+        
     }
 })

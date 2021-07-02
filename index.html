@@ -51,7 +51,7 @@
                 <div class="contatti">
 
                     <div  class="d-flex align-items-center" @click="cambiaImg(index)" v-for="(element, index) in contacts">
-                        <img src="img/avatar_1.jpg" alt="avatar">
+                        <img :src=" 'img/avatar' + element.avatar + '.jpg' " alt="avatar">
                         <h5>{{element.name}}</h5>
                     </div>
                     
@@ -66,7 +66,7 @@
                     <div class="utente-banner d-flex justify-content-between">
                         <div class="d-flex align-items-center">
                             
-                            <img src="img/avatar_1.jpg" alt="avatar-1">
+                            <img src=" 'img/avatar' + element.avatar + '.jpg' " alt="avatar">
                             <h5>{{}}</h5>
                             
                         </div>
@@ -91,7 +91,7 @@
                     <!-- foot chat -->
                     <div class="input-chat d-flex align-items-center">
                         <i class="far fa-smile"></i>
-                        <input type="text" @keyup.enter="sendMessage" v-model="userMessage" placeholder="scrivi un messaggio">
+                        <input type="text" placeholder="scrivi un messaggio">
                         <i class="fas fa-microphone"></i>
                     </div>
                 
