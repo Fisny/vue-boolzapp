@@ -63,11 +63,13 @@
             <div class="col-8 messages-side p-0 ">
 
                     <!-- top banner -->
-                    <div class="utente-banner d-flex justify-content-between">
+                    <div class="utente-banner d-flex justify-content-between ">
                         <div class="d-flex align-items-center">
                             
-                            <img src=" 'img/avatar' + element.avatar + '.jpg' " alt="avatar">
-                            <h5>{{}}</h5>
+                            <img :src=" 'img/avatar' + contacts[indexContact].avatar + '.jpg' " alt="avatar">
+                            <h5 v-for="names in contacts[indexContact].name"> <!-- aggiusta -->
+                                {{names.name}}
+                            </h5>
                             
                         </div>
 

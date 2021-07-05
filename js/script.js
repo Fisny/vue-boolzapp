@@ -5,7 +5,7 @@ new Vue ({
     data: {
         userMessage: '',
         indexContact: 0,
-        indexImg: 0,
+        
         contacts: [
             {
                 name: 'Michele',
